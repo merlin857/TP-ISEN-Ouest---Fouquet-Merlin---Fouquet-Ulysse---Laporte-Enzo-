@@ -1,329 +1,351 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-    <style>
-html {
-    font-family: Open Sans,sans-serif;
-}
-/* Conteneur principal du header */
-.header-isen {
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domaines professionnels ISEN</title>
+  <style>
+    html {
+      font-family: Open Sans, sans-serif;
+    }
 
-/* Organisation interne */
-.header-container {
-  max-width: 1400px; /* un peu plus large pour aérer */
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    /* HEADER */
+    .header-isen {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
 
-/* Logo */
-.header-logo img {
-  height: 45px; /* logo moins haut */
-  width: auto;
-}
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-/* Navigation */
-.header-nav {
-  background: #e30613; /* Rouge ISEN */
-  flex: 1; /* occupe toute la largeur dispo */
-  margin-left: 40px; /* espace entre logo et barre rouge */
-}
+    .header-logo img {
+      height: 45px;
+      width: auto;
+    }
 
-.header-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around; /* liens espacés sur toute la largeur */
-  margin: 0;
-  padding: 0;
-}
+    .header-nav {
+      background: #e30613;
+      flex: 1;
+      margin-left: 40px;
+    }
 
-.header-nav li {
-  flex: 1; /* chaque lien occupe une largeur égale */
-  text-align: center;
-}
+    .header-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+    }
 
-.header-nav a {
-  display: block;
-  padding: 14px 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #fff;
-  transition: background 0.2s;
-  text-decoration: none;
-}
+    .header-nav li {
+      flex: 1;
+      text-align: center;
+    }
 
-.header-nav a:hover {
-  text-decoration: underline;
-}
-    </style>
+    .header-nav a {
+      display: block;
+      padding: 14px 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #fff;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .header-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTION IMAGES */
+    .dp-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .dp-section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #000;
+    }
+
+    .dp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .dp-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      transition: transform 0.2s ease;
+      padding: 3px 3px 0;
+      position: relative;
+    }
+
+    .dp-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .dp-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* PLUGGIN BLOCKS */
+    .block-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .block-columns {
+      display: flex;
+      gap: 40px;
+      align-items: normal;
+      flex-wrap: wrap;
+    }
+
+    .block-alternance {
+      margin: 40px auto;
+      border: 2px solid #c8102e;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .block-alternance img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .block-alternance-content {
+      padding: 24px 30px;
+    }
+
+    .block-alternance-content h2 {
+      font-size: 200%;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .block-alternance-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    .block-button {
+      margin: auto;
+      text-align: center;
+    }
+
+    .block-button a {
+      background-color: #e30613;
+      color: #fff;
+      display: inline-block;
+      padding: .5rem 2rem;
+      border-radius: 3.45rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .block-button a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #000;
+      color: #fff;
+      padding: 40px 20px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-col-logo {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-logo {
+      height: 100px;
+      margin-bottom: 15px;
+      margin-top: 30px;
+    }
+
+    .btn-contact {
+      display: block;
+      padding: 10px 20px;
+      background: #c8102e;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 25px;
+      margin: auto;
+    }
+
+    .btn-contact:hover {
+      background: #a00b23;
+    }
+
+    .footer-links-section {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-cities {
+      font-size: 40px;
+      font-weight: 700;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .footer-links-container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      width: 25%;
+    }
+
+    .footer-col h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-col a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 15px;
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-<header class="header-isen">
-  <div class="header-container">
-    <!-- Logo -->
-    <a href="/" class="header-logo">
-      <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
-    </a>
 
-    <!-- Navbar -->
-    <nav class="header-nav">
-      <ul>
-        <li><a href="#">Liens à venir</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="header-isen">
+    <div class="header-container">
+      <a href="/" class="header-logo">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
+      </a>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#">Liens à venir</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Domaines professionnels ISEN</title>
-    <style>
-
-/* IMAGES */
-.dp-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-.dp-section h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #000;
-}
-.dp-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-}
-.dp-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.2s ease;
-  padding: 3px 3px 0;
-  position: relative;
-}
-.dp-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-.dp-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.dp-card p {
-  padding: 1px 0.5em;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  position: relative;
-  background-color: #05819d;
-  color: white;
-  font-weight: bold;
-  display: inline;
-  position: absolute;
-  bottom: 1em;
-  left: 0;
-  margin: 0;
-}
-    </style>
-</head>
-
-
-
-<body>
+  <!-- SECTION IMAGES -->
   <section class="dp-section">
     <h2>Nos formations ingénieurs</h2>
     <div class="dp-grid">
-      <!-- 1. Cybersécurité -->
-      <div class="dp-card">
-        <a href="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-cybersecurite.png">
-          <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-cybersecurite.png" alt="Cybersécurité">
-        </a>
-      </div>
-      <!-- 2. Développement logiciel -->
-      <div class="dp-card">
-        <a href="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-developpement-logiciel.png">
-          <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-developpement-logiciel.png" alt="Développement logiciel">
-        </a>
-      </div>
-      <!-- 3. Intelligence artificielle -->
-      <div class="dp-card">
-        <a href="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-intelligence-artificielle.png">
-          <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-intelligence-artificielle.png" alt="Intelligence artificielle">
-        </a>
-      </div>
-      <!-- 4–5. Cartes conservées pour respecter la structure ; images d'attente -->
-      <div class="dp-card">
-        <a href="#">
-          <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
-        </a>
-      </div>
-      <div class="dp-card">
-        <a href="#">
-          <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
-        </a>
-      </div>
+      <div class="dp-card"><a href="#"><img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-cybersecurite.png" alt="Cybersécurité"></a></div>
+      <div class="dp-card"><a href="#"><img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-developpement-logiciel.png" alt="Développement logiciel"></a></div>
+      <div class="dp-card"><a href="#"><img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-intelligence-artificielle.png" alt="Intelligence artificielle"></a></div>
     </div>
   </section>
-</body>
-</html>
 
+  <!-- PLUGGIN BLOCK (Postbac / Apprentissage) -->
+  <div class="block-container">
+    <div class="block-columns">
 
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-    <style>
-html {
-  font-family: Open Sans,sans-serif;
-}
+      <!-- Bloc Post-bac -->
+      <section class="block-alternance">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/18/formation-initiale-scaled.jpg" alt="Formations post-bac">
+        <div class="block-alternance-content">
+          <h2>Formations post-bac</h2>
+          <p>Chaque étudiant construit son propre parcours de formation sur 5 ans.</p>
+          <p>Au cours des trois premières années post-bac, les étudiants choisissent leur cursus parmi 7 cycles de formation différents.</p>
+          <div class="block-button">
+            <a href="https://isen-ouest.fr/formations/cycles-post-bac/">→ Cycles post-bac</a>
+          </div>
+        </div>
+      </section>
 
-.site-footer {
-  background: #000;
-  color: #fff;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-}
+            <!-- Bloc FISA -->
+      <section class="block-alternance">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/18/formation-apprentissage-scaled.jpg" alt="Formation ingénieur en apprentissage">
+        <div class="block-alternance-content">
+          <h2>Devenir ingénieur par alternance</h2>
+          <p>Le cycle ingénieur en apprentissage permet d’alterner les périodes à l’école et les périodes au sein de l’entreprise d’accueil en montant progressivement en compétence.</p>
+          <p>Cette formation favorise une immersion professionnelle rapide tout en étant rémunéré pendant toute la durée du contrat.</p>
+          <div class="block-button">
+            <a href="https://isen-ouest.fr/formations/ingenieur-apprentissage/">→ Formation d'ingénieurs sous statut apprenti</a>
+          </div>
+        </div>
+      </section>
 
-/* Conteneur principal */
-.footer-container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-/* Colonne 1 : logo + bouton */
-.footer-col-logo {
-  flex: 1;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-logo {
-  height: 100px;
-  margin-bottom: 15px;
-  margin-top: 30px;
-}
-
-.btn-contact {
-  display: block;
-  padding: 10px 20px;
-  background: #c8102e;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 25px;
-  margin: auto;
-}
-
-.btn-contact:hover {
-  background: #a00b23;
-}
-
-/* Zone liens (colonnes 2-4) */
-.footer-links-section {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Titre général */
-.footer-cities {
-  font-size: 40px;
-  font-weight: 700;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-/* Colonnes de liens */
-.footer-links-container {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.footer-col {
-	width: 25%
-}
-.footer-col h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col li {
-  margin-bottom: 8px;
-}
-
-.footer-col a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-col a:hover {
-  text-decoration: underline;
-}
-
-/* Bas de page */
-.footer-bottom {
-  text-align: center;
-  padding-top: 15px;
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-    </style>
-</head>
-<body>
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <!-- Colonne 1 : Logo + bouton -->
-    <div class="footer-col footer-col-logo">
-      <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" 
-           alt="ISEN Ouest" class="footer-logo">
     </div>
-
-    <!-- Zone titres + colonnes 2-4 -->
-    <div class="footer-links-section">
-      <!-- Titre général -->
-      <p class="footer-cities">Texte à venir</p>
-
-
   </div>
 
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col footer-col-logo">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" alt="ISEN Ouest" class="footer-logo">
+      </div>
+      <div class="footer-links-section">
+        <p class="footer-cities">Texte à venir</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Bas de page -->
-</footer>
-<div class="footer-bottom">
-  &copy;
-</div>
+  <div class="footer-bottom">
+    &copy;
+  </div>
+
 </body>
 </html>
-
-
